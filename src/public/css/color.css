@@ -45,3 +45,24 @@
 .main-color-div .color-div p:hover {
     cursor: pointer;
 }
+
+.msg {
+    width: 100vw;
+    height: 10vh;
+    margin: -20vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+#copy-msg {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    text-transform: capitalize;
+    border: none;
+    padding:10px 20px;
+    border-radius: 8px;
+    background-color: royalblue;
+    color: white;
+}
