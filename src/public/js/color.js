@@ -14,24 +14,22 @@ const loadDataOnKeyDown = (mainDiv, draggables) => {
   let arrayOfColorDivs = Array.from(draggables);
   for (let el of arrayOfColorDivs) {
     let button = el.querySelector(".btn-lock");
-    if (!button.hasEventListener) {
-      button.hasEventListener = true;
-      button.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopImmediatePropagation();
-        console.log("button clicked");
 
-        if (button.classList.contains("locked")) {
-          button.classList.remove("locked");
-          button.innerHTML = "Lock";
-          console.log("class list lock removed");
-        } else if (!button.classList.contains("locked")) {
-          button.classList.add("locked");
-          button.innerHTML = "Unlock";
-          console.log("class list lock added");
-        }
-      });
-    }
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      console.log("button clicked");
+
+      if (button.classList.contains("locked")) {
+        button.classList.remove("locked");
+        button.innerHTML = "Lock";
+        console.log("class list lock removed");
+      } else if (!button.classList.contains("locked")) {
+        button.classList.add("locked");
+        button.innerHTML = "Unlock";
+        console.log("class list lock added");
+      }
+    });
 
     let para = el.querySelector(".color-value");
 
@@ -55,6 +53,14 @@ function handleCopyButtonClick(button) {
     .catch((err) => {
       console.error("Error copying text to clipboard:", err);
     });
+
+  const message = document.getElementById("copy-msg");
+  message.style.display = "flex";
+  message.innerHTML = "copied";
+  setTimeout(function () {
+    message.innerHTML = "";
+    message.style.display = "none";
+  }, 1500);
 }
 
 const draggingItem = Array.from(draggables);
