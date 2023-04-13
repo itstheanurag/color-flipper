@@ -62,3 +62,8 @@ body {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+.header .support {
+    font-size: 12px;
+    color: grey;
+}
