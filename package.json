@@ -26,11 +26,20 @@
     "sharp": "^0.32.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3",
     "nodemon": "^2.0.22"
   },
   "events": {
     "restart": "kill-port 3333",
     "crash": "kill-port 3333"
   },
-  "delay": "500"
+  "delay": "500",
+  "husky": {
+    "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+             }
+          }
+
 }
