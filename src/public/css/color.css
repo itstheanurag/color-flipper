@@ -66,3 +66,41 @@
     background-color: royalblue;
     color: white;
 }
+ 
+
+#navbar{
+    height: 80px;
+    position: sticky;
+    position: static;
+    z-index: 10;
+    background-color:rgba(0, 0, 0, 0.056);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row;  */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
+}
+
+#navbar #left-button {
+    padding-left: 30px;
+}
+
+#navbar #right-button {
+    padding-right: 30px;
+}
+
+.fa-sharp {
+    font-size: 40px;
+    background: linear-gradient(#E43397, #4C0BD1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
