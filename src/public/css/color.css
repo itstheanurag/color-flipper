@@ -16,7 +16,7 @@
 
 .main-color-div .color-div {
     width: 20%;
-    height: 100vh;
+    height: 105vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,21 +68,19 @@
 }
  
 
-#navbar{
+.nav-bar{
     height: 80px;
-    position: sticky;
-    position: static;
+    position: fixed;
+    top: 0;
     z-index: 10;
-    background-color:rgba(0, 0, 0, 0.056);
+    background-color:rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-direction: row;  */
-    /* align-items: center; */
-    /* justify-content: space-between; */
+    width: 100%;
 }
 
-#navbar ul {
+.nav-bar ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -90,11 +88,11 @@
     text-transform: capitalize;
 }
 
-#navbar #left-button {
+.nav-bar #left-button {
     padding-left: 30px;
 }
 
-#navbar #right-button {
+.nav-bar #right-button {
     padding-right: 30px;
 }
 
