@@ -8,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.header {
+.nav-bar {
     height: 80px;
     width: 100%;
     background: rgb(255, 255, 255);
@@ -19,14 +19,15 @@
     justify-content: space-between;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     position: sticky;
+    top: 0;
 }
 
-.header img {
+.nav-bar img {
     height: 120px;
     padding-left: 30px;
 }
 
-.header h1 {
+.nav-bar h1 {
     font-size: xx-large;
     margin-right: 30px;
     background: linear-gradient(#E43397, #4C0BD1);
@@ -34,18 +35,18 @@
     -webkit-background-clip: text;
 }
 
-.header ul {
+.nav-bar ul {
     display: flex;
     align-items: center;
     list-style-type: none;
     font-size: large;
 }
 
-.header a {
+.nav-bar a {
     text-decoration: none;
 }
 
-.header ul li {
+.nav-bar ul li {
     padding: 0 12px;
 }
 
@@ -84,4 +85,15 @@
 
 .body img {
     height: 450px;
+}
+footer{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+footer a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
