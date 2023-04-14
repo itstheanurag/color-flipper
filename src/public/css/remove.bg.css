@@ -43,7 +43,7 @@ body {
 
     }
     
- .blur-contenter{
+ .blur-container{
     background:linear-gradient(#c0bfd22c,#e4eff15a,#09097930);
     width: 80vw;
     height: 80vh;
@@ -53,7 +53,7 @@ body {
 
 
  }
-.contenter{
+.child-container{
     position: absolute;
     width: 80%;
     height: 80vh;
@@ -88,17 +88,17 @@ border: none;
 .content button i{
     padding: 5px;
 }
-.contenter h2{
+.child-container h2{
     font-size: 40px;
     letter-spacing: 5px;
     position: absolute;
     top: 150px;
 }
- .contenter span{
+ .child-container span{
     display: block;
     letter-spacing: 4px;
  }
- .blur-contenter h3{
+ .blur-container h3{
     z-index: 100;
  }
 .container h3 {
