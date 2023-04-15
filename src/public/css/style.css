@@ -52,7 +52,7 @@
 
 .body {
     height: 650px;
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(#E43397, #4C0BD1);
     display: flex;
     align-items: center;
@@ -87,10 +87,10 @@
     height: 450px;
 }
 footer{
-    height: 50px;
+    height: 80px;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: rgb(255, 255, 255);
 }
 footer a{
