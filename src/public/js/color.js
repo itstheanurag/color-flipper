@@ -38,11 +38,13 @@ const loadDataOnKeyDown = (mainDiv, draggables) => {
     if (!button.classList.contains("locked")) {
       el.style.background = randomColor;
       para.innerHTML = randomColor;
+      console.log(hexToRgb(randomColor));
     }
   }
 };
 
 document.onload = loadDataOnKeyDown(mainDiv, draggables);
+
 function handleCopyButtonClick(button) {
   let text = button.textContent;
   navigator.clipboard
@@ -82,3 +84,18 @@ document.addEventListener("keydown", (event) => {
     loadDataOnKeyDown(mainDiv, draggables);
   }
 });
+
+function hexToRgb(hex) {
+  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
+
+  // Convert to RGB values
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        red: parseInt(result[1], 16),
+        green: parseInt(result[2], 16),
+        blue: parseInt(result[3], 16),
+      }
+    : null;
+}
