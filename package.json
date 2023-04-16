@@ -35,10 +35,10 @@
     "nodemon": "^2.0.22"
   },
   "events": {
-    "restart": "kill-port 3333",
-    "crash": "kill-port 3333"
+    "restart": "kill-port 3000",
+    "crash": "kill-port 3000"
   },
-  "delay": "500",
+  "delay": "1500",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
