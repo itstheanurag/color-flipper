@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Tool</title>
+    <link rel="stylesheet" href="css/gradient.css" />
+  </head>
+  <body>
+    <div id="gradient">
+      <div class="colors">
+        <input type="color" id="color1" value="#000000" />
+        <input type="color" id="color2" value="#ffffff" />
+      </div>
+      <input type="range" id="steps" min="2" max="10" value="2" />
+      <button id="gradient-btn">Generate Gradient</button>
+      <canvas class="hidden" id="gradient-canvas"></canvas>
+    </div>
+
+    <script src="js/gradient.js"></script>
+  </body>
+</html>
