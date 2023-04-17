@@ -10,7 +10,7 @@
 }
 section{
    height: 100vh;
-   width: 100vw;
+   width: 100%;
    padding-top: 120px;
    background: linear-gradient(#E43397, #4C0BD1);
    align-items: center;
