@@ -31,24 +31,7 @@ app.post("/image", upload.single("image"), async (req, res) => {
 
     const imagePath = `/images/${req.file.originalname}`;
 
-    jimp.read(`src/${imagePath}`, (err, image) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-
-      image
-        .background(0xffffffff)
-        .quality(100)
-        .write(`${req.file.originalname}`, (err) => {
-          if (err) {
-            console.error(err);
-            return;
-          }
-          console.log("Background removed successfully.");
-        });
-    });
-    // res.status(201).send("Image uploaded succesfully");
+    res.status(201).send("Image uploaded succesfully");
   } catch (error) {
     console.log(error);
     res.status(400).send(error);

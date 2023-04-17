@@ -2,6 +2,7 @@ const gradient = document.getElementById("gradient");
 const colorsDiv = document.getElementById("colors");
 
 function generateGradient(color1, color2, direction, type) {
+  
   let gradientType = "";
 
   switch (type) {
@@ -40,32 +41,30 @@ function generateGradient(color1, color2, direction, type) {
       break;
   }
 
-  return gradient;
+  return gradientType;
 }
 
-
 function directionToDegree(direction) {
-    switch (direction.toLowerCase()) {
-      case "top":
-        return 270;
-      case "topright":
-        return 315;
-      case "right":
-        return 0;
-      case "bottomright":
-        return 45;
-      case "bottom":
-        return 90;
-      case "bottomleft":
-        return 135;
-      case "left":
-        return 180;
-      case "topleft":
-        return 225;
-      default:
-        throw new Error("Invalid direction input");
-    }
+  switch (direction.toLowerCase()) {
+    case "top":
+      return 270;
+    case "topright":
+      return 315;
+    case "right":
+      return 0;
+    case "bottomright":
+      return 45;
+    case "bottom":
+      return 90;
+    case "bottomleft":
+      return 135;
+    case "left":
+      return 180;
+    case "topleft":
+      return 225;
+    default:
+      throw new Error("Invalid direction input");
   }
+}
 
 console.log(generateGradient());
-
