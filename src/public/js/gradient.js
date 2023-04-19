@@ -4,7 +4,24 @@ const colorsDiv = document.getElementById("colors");
 const colors = document.getElementsByClassName("color-item");
 
 for (const el of Array.from(colors)) {
-  console.log(el.innerHTML);
+  el.style.background = el.innerHTML;
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    // create an input element of type color
+    const input = document.createElement("input");
+    input.type = "color";
+
+    // add event listener for input change
+    input.addEventListener("input", (event) => {
+      // change the background color of color-item to the selected color
+      el.style.backgroundColor = event.target.value;
+      el.innerHTML = event.target.value;
+    });
+
+    input.dispatchEvent(new Event('click'))
+  });
 }
 
 function generateGradient(color1, color2, direction, type) {
@@ -72,4 +89,6 @@ function directionToDegree(direction) {
   }
 }
 
-console.log(generateGradient());
+// console.log(generateGradient());
+
+window.onload = generateGradient();
