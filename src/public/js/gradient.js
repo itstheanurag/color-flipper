@@ -1,8 +1,13 @@
 const gradient = document.getElementById("gradient");
 const colorsDiv = document.getElementById("colors");
 
+const colors = document.getElementsByClassName("color-item");
+
+for (const el of Array.from(colors)) {
+  console.log(el.innerHTML);
+}
+
 function generateGradient(color1, color2, direction, type) {
-  
   let gradientType = "";
 
   switch (type) {

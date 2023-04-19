@@ -8,38 +8,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 #gradient {
-    width: 100%;
+    width: 50%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px;
+    border: 1px solid black;
+} 
+
+#gradient .color-item {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px 20px;
 }
 
-#gradient .colors {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.colors #color1, .colors #color2  {
-    width: 50vw;
-    height: 50vh;
-    appearance: none; 
-    -webkit-appearance: none; 
-    border: none; 
-    outline: none;
-    background: transparent;
-    margin: 0;
-}
-
-input[type="color"] {
-    appearance: none;
-    border: none;
-    outline: none;
-  }
-
-.hidden {
-    display: none;
-}
