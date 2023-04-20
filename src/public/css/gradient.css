@@ -9,24 +9,68 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    background: linear-gradient(#E43397, #4C0BD1);
 }
 
 #gradient {
-    width: 50%;
     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20%;
+    gap: 15px;
+}
+
+#gradient .colors {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    border: 1px solid black;
 } 
 
-#gradient .color-item {
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 10px 20px;
+.colors .color-item:hover {
+    cursor: pointer;
 }
 
+#gradient .colors .color-item {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.colors #create-color-item {
+    width: 100px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+}
+
+#create-color-item:hover {
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+.directions {
+   width: 100%;
+   display: flex;
+   align-items: center;justify-content: center;
+   gap: 30px;
+}
+
+.directions span {
+    padding: 10px;
+}
+
+#generate-gradient {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+}

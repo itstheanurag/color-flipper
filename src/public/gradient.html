@@ -6,11 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gradient Tool</title>
     <link rel="stylesheet" href="css/gradient.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div id="gradient">
-      <div class="color-item">#E43397</div>
-      <div class="color-item">#4C0BD1</div>
+      <div class="directions">
+        <span id="top"><i class="fa-solid fa-circle-up"></i></span>
+        <span id="topright"><i class="fa-solid fa-circle-up-right"></i></span>
+        <span id="topleft">top left</span>
+        <span id="left"><i class="fa-solid fa-circle-left"></i></span>
+        <span id="right"><i class="fa-solid fa-circle-right"></i></span>
+        <span id="bottom"><i class="fa-solid fa-circle-down"></i></span>
+        <span id="bottomright">bottom right</span>
+        <span id="bottomleft">bottom left</span>
+      </div>
+
+      <div class="gradient-type"></div>
+
+      <div class="colors">
+        <div class="color-item">#E43397</div>
+        <div class="color-item">#4C0BD1</div>
+        <button id="create-color-item">ADD</button>
+      </div>
+      <button id="generate-gradient">Generate Gradient</button>
+
+      <div class="code"></div>
     </div>
 
     <script src="js/gradient.js"></script>

@@ -2,9 +2,24 @@ const gradient = document.getElementById("gradient");
 const colorsDiv = document.getElementById("colors");
 
 const colors = document.getElementsByClassName("color-item");
+const inputColors = document.querySelector(".input-colors");
 
 for (const el of Array.from(colors)) {
-  console.log(el.innerHTML);
+  el.style.background = el.innerHTML;
+  el.innerHTML = el.innerHTML;
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    const inputElement = document.createElement("input");
+    inputElement.type = "color";
+    inputElement.addEventListener("input", (event) => {
+      el.style.backgroundColor = inputElement.value;
+      el.textContent = inputElement.value;
+    });
+    inputElement.click();
+    console.log(inputElement)
+  });
 }
 
 function generateGradient(color1, color2, direction, type) {
@@ -72,4 +87,6 @@ function directionToDegree(direction) {
   }
 }
 
-console.log(generateGradient());
+// console.log(generateGradient());
+
+window.onload = generateGradient();
