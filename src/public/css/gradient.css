@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 20%;
+    padding: 10%;
     gap: 15px;
 }
 
@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    padding: 10px;
 } 
 
 .colors .color-item:hover {
@@ -61,7 +62,8 @@ body {
 .directions {
    width: 100%;
    display: flex;
-   align-items: center;justify-content: center;
+   align-items: center;
+   justify-content: center;
    gap: 30px;
 }
 
@@ -74,3 +76,93 @@ body {
     border: none;
     border-radius: 8px;
 }
+
+.nav-bar{
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
+}
+
+.nav-bar #left-button {
+    padding-left: 30px;
+}
+
+.nav-bar #right-button {
+    padding-right: 30px;
+}
+
+.fa-sharp {
+    font-size: 30px;
+    background: linear-gradient(#E43397, #4C0BD1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h1{
+    background: linear-gradient(#E43397, #4C0BD1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#gradient p{
+    font-weight: 1000;
+    font-size: 20px;
+    color: white;
+}
+
+.bi{
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.692);
+}
+ .dropdown a{
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    padding: 11px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 8px;
+    transition: 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+ }
+
+ .dropdown a:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+
+ .grendient-type{
+    position: absolute;
+    top:65%;
+    right:33%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.067);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+     
+ }
+ .grendient-type a{
+    display: block;
+    color: #fff;
+ }
