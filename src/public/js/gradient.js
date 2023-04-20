@@ -2,25 +2,23 @@ const gradient = document.getElementById("gradient");
 const colorsDiv = document.getElementById("colors");
 
 const colors = document.getElementsByClassName("color-item");
+const inputColors = document.querySelector(".input-colors");
 
 for (const el of Array.from(colors)) {
   el.style.background = el.innerHTML;
+  el.innerHTML = el.innerHTML;
   el.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopImmediatePropagation();
 
-    // create an input element of type color
-    const input = document.createElement("input");
-    input.type = "color";
-
-    // add event listener for input change
-    input.addEventListener("input", (event) => {
-      // change the background color of color-item to the selected color
-      el.style.backgroundColor = event.target.value;
-      el.innerHTML = event.target.value;
+    const inputElement = document.createElement("input");
+    inputElement.type = "color";
+    inputElement.addEventListener("input", (event) => {
+      el.style.backgroundColor = inputElement.value;
+      el.textContent = inputElement.value;
     });
-
-    input.dispatchEvent(new Event('click'))
+    inputElement.click();
+    console.log(inputElement)
   });
 }
 
