@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 10%;
+    padding: 150px;
     gap: 15px;
 }
 
@@ -39,8 +39,11 @@ body {
 #gradient .colors .color-item {
     border: none;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     color: white;
+    transition: 0.1s;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    padding: 11px;   
 }
 
 .colors #create-color-item {
@@ -51,12 +54,18 @@ body {
     padding: 10px 20px;
     background: black;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    padding: 11px;
 }
+
+ .color-item a:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
 
 #create-color-item:hover {
     cursor: pointer;
     background: white;
     color: black;
+    
 }
 
 .directions {
@@ -67,15 +76,17 @@ body {
    gap: 30px;
 }
 
-.directions span {
-    padding: 10px;
-}
 
 #generate-gradient {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    padding: 11px;
 }
+
+#generate-gradient a:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
 
 .nav-bar{
     height: 80px;
@@ -166,3 +177,49 @@ h1{
     display: block;
     color: #fff;
  }
+ .color-btn{
+    display: flex;
+    gap: 25px;
+ }
+ .color-btn2{
+    display: flex;
+    gap: 25px;
+ }
+
+ @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #gradient {
+      width: 100%;
+      padding: 30px;
+    }
+    #gradient p{
+        margin-top: 80px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .directions {
+      width: 100%;
+      display: flex;
+       flex-wrap: wrap;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+   
+    .color-btn{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .color-btn2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h1{
+        font-size: 4vw;
+    }
+  }
+
+ 
